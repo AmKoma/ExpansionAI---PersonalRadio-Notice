@@ -4,7 +4,6 @@ const path = require('path');
 const AUDIO_DIR = path.join(__dirname, 'Audio');
 const OUTPUT_FILE = path.join(__dirname, 'audio.cpp');
 
-// Dateierweiterungen, die als Audio gelten
 const AUDIO_EXTENSIONS = ['.ogg', '.wav'];
 
 function getSoundEntries() {
