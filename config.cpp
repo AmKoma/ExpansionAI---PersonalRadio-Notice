@@ -63,25 +63,17 @@ class CfgSoundShaders
 	{
 		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Zelenogorsk_Mercenaries", 1}};
 	};
-	class PersonalRadio_Zelenogorsk_East_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
-	{
-		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Zelenogorsk_East", 1}};
-	};
 	class PersonalRadio_Metalurg_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
 	{
 		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Metalurg_Mercenaries", 1}};
-	};
-	class PersonalRadio_Metalurg_East_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
-	{
-		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Metalurg_East", 1}};
 	};
 	class PersonalRadio_Stary_Sobor_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
 	{
 		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Stary_Sobor_Mercenaries", 1}};
 	};
-	class PersonalRadio_Stary_Sobor_East_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
+	class PersonalRadio_Elektrozavodsk_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
 	{
-		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Stary_Sobor_East", 1}};
+		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Elektrozavodsk_Mercenaries", 1}};
 	};
 	class PersonalRadio_Unknown_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
 	{
@@ -95,25 +87,17 @@ class CfgSoundSets
 	{
 		soundShaders[] = {"PersonalRadio_Zelenogorsk_Mercenaries_SoundShader"};
 	};
-	class PersonalRadio_Zelenogorsk_East_SoundSet
-	{
-		soundShaders[] = {"PersonalRadio_Zelenogorsk_East_SoundShader"};
-	};
 	class PersonalRadio_Metalurg_Mercenaries_SoundSet
 	{
 		soundShaders[] = {"PersonalRadio_Metalurg_Mercenaries_SoundShader"};
-	};
-	class PersonalRadio_Metalurg_East_SoundSet
-	{
-		soundShaders[] = {"PersonalRadio_Metalurg_East_SoundShader"};
 	};
 	class PersonalRadio_Stary_Sobor_Mercenaries_SoundSet
 	{
 		soundShaders[] = {"PersonalRadio_Stary_Sobor_Mercenaries_SoundShader"};
 	};
-	class PersonalRadio_Stary_Sobor_East_SoundSet
+	class PersonalRadio_Elektrozavodsk_Mercenaries_SoundSet
 	{
-		soundShaders[] = {"PersonalRadio_Stary_Sobor_East_SoundShader"};
+		soundShaders[] = {"PersonalRadio_Elektrozavodsk_Mercenaries_SoundShader"};
 	};
 	class PersonalRadio_Unknown_SoundSet
 	{

@@ -8,7 +8,7 @@ modded class eAIBase
 
         if (GetGame().IsServer())
         {
-            float delay = 60; // Erstes Signal nach 5 Minuten
+            float delay = PersonalRadioConfigLoader.Get().TimeToFirstBroadcast;
             m_FunkBroadcastTimer = new Timer(CALL_CATEGORY_SYSTEM);
             m_FunkBroadcastTimer.Run(delay, this, "TriggerFunkBroadcast", null, false);
         }
@@ -27,7 +27,6 @@ modded class eAIBase
 
     void TriggerFunkBroadcast()
     {
-
         if (!GetGame() || !GetGame().IsServer())
             return;
 
@@ -47,6 +46,7 @@ modded class eAIBase
 
         string faction = factionObj.GetName();
 
+        // Fraktion erlaubt?
         if (!PersonalRadioConfigLoader.Get().IsFactionAllowed(faction))
         {
             if (m_FunkBroadcastTimer)
@@ -54,6 +54,17 @@ modded class eAIBase
                 m_FunkBroadcastTimer.Stop();
                 m_FunkBroadcastTimer = null;
             }
+            return;
+        }
+
+        // Dynamische Broadcast-Chance prüfen
+        float minChance = PersonalRadioConfigLoader.Get().MinBroadcastChance;
+        float maxChance = PersonalRadioConfigLoader.Get().MaxBroadcastChance;
+        float actualChance = Math.RandomFloatInclusive(minChance, maxChance);
+
+        if (Math.RandomFloat01() > actualChance)
+        {
+            ScheduleNextFunk();
             return;
         }
 
@@ -91,8 +102,6 @@ modded class eAIBase
                 continue;
             }
 
-            string name = identity.GetName();
-
             array<EntityAI> items = new array<EntityAI>();
             player.GetInventory().EnumerateInventory(InventoryTraversalType.PREORDER, items);
 
@@ -111,7 +120,7 @@ modded class eAIBase
 
     void ScheduleNextFunk()
     {
-        float delay = Math.RandomFloatInclusive(900, 3600); // 15–60 Minuten
+        float delay = Math.RandomFloatInclusive(PersonalRadioConfigLoader.Get().MinTimeForNextBroadcast, PersonalRadioConfigLoader.Get().MaxTimeForNextBroadcast);
         if (!m_FunkBroadcastTimer)
             m_FunkBroadcastTimer = new Timer(CALL_CATEGORY_SYSTEM);
 
