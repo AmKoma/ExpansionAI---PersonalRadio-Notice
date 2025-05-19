@@ -134,9 +134,9 @@ class CfgSoundShaders
 		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Unknown", 1}};
 	};
 
-	class PersonalRadio_Vybor_Airfield_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
+	class PersonalRadio_Airfield_Vybor_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
 	{
-		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Vybor_Airfield_Mercenaries", 1}};
+		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Airfield_Vybor_Mercenaries", 1}};
 	};
 
 	class PersonalRadio_Vybor_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
@@ -232,9 +232,9 @@ class CfgSoundSets
 		soundShaders[] = {"PersonalRadio_Unknown_SoundShader"};
 	};
 
-	class PersonalRadio_Vybor_Airfield_Mercenaries_SoundSet
+	class PersonalRadio_Airfield_Vybor_Mercenaries_SoundSet
 	{
-		soundShaders[] = {"PersonalRadio_Vybor_Airfield_Mercenaries_SoundShader"};
+		soundShaders[] = {"PersonalRadio_Airfield_Vybor_Mercenaries_SoundShader"};
 	};
 
 	class PersonalRadio_Vybor_Mercenaries_SoundSet
