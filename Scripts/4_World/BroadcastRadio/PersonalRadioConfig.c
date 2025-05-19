@@ -12,7 +12,6 @@ class PersonalRadioConfig
 
         if (!FileExist(path))
         {
-            Print("[PersonalRadioConfig] Keine Config gefunden. Erstelle Standard-Konfiguration.");
             AllowedFactions = new array<string>();
             AllowedFactions.Insert("East");
             AllowedFactions.Insert("Mercenaries");

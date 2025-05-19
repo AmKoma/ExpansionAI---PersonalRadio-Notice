@@ -4,7 +4,6 @@ modded class MissionServer
     {
         super.OnInit();
 
-        Print("[MissionServer] Initialisiere PersonalRadio Config ...");
         PersonalRadioTickManager.Init();
     }
 }

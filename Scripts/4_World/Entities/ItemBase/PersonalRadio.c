@@ -37,27 +37,20 @@ modded class PersonalRadio
 
         if (currentTime < m_NextSoundTime)
         {
-            Print("[PersonalRadio] Cooldown active. Time left: " + (m_NextSoundTime - currentTime).ToString());
             return;
         }
 
         // 70% Chance
         if (Math.RandomFloat01() > 0.7)
         {
-            Print("[PersonalRadio] RNG blockiert Funkspruch diese Runde.");
             return;
         }
 
         string factionName, locationName;
         if (DetectEnemyNearbyAndLocation(factionName, locationName))
         {
-            Print("[PersonalRadio] Enemy detected! Faction: " + factionName + ", Location: " + locationName);
             PlayRadioPing(factionName, locationName);
             m_NextSoundTime = currentTime + COOLDOWN_TIME;
-        }
-        else
-        {
-            Print("[PersonalRadio] No valid enemy found or location unknown.");
         }
     }
 
