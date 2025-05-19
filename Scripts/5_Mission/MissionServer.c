@@ -4,6 +4,6 @@ modded class MissionServer
     {
         super.OnInit();
 
-        PersonalRadioTickManager.Init();
+        PersonalRadioConfigLoader.Get();
     }
 }
