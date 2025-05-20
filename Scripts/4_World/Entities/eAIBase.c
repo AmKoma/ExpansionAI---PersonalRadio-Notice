@@ -93,7 +93,7 @@ modded class eAIBase
                 continue;
 
             float dist = vector.Distance(player.GetPosition(), pos);
-            if (dist > 1250)
+            if (dist > PersonalRadioConfigLoader.Get().AISearchRadius;)
                 continue;
 
             PlayerIdentity identity = player.GetIdentity();

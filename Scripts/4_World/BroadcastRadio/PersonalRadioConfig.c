@@ -6,6 +6,7 @@ class PersonalRadioConfig
     float MaxTimeForNextBroadcast;
     float MinBroadcastChance;
     float MaxBroadcastChance;
+    float AISearchRadius;
 
     void Load()
     {
@@ -25,6 +26,7 @@ class PersonalRadioConfig
             MaxTimeForNextBroadcast = 5400;
             MinBroadcastChance = 0.3;
             MaxBroadcastChance = 0.7;
+            AISearchRadius = 2500;
 
             JsonFileLoader<PersonalRadioConfig>.JsonSaveFile(path, this);
             return;
@@ -45,6 +47,7 @@ class PersonalRadioConfig
             MaxTimeForNextBroadcast = 5400;
             MinBroadcastChance = 0.3;
             MaxBroadcastChance = 0.7;
+            AISearchRadius = 1250;
         }
 
         JsonFileLoader<PersonalRadioConfig>.JsonSaveFile("$profile:Broadcast/Settings.json", this);
