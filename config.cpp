@@ -50,6 +50,22 @@ class CfgMods
 	};
 };
 
+class CfgVehicles
+{
+	class PersonalRadio
+	{
+		class EnergyManager
+		{
+			hasIcon = 1;
+			autoSwitchOff = 1;
+			energyUsagePerSecond = 0.001;
+			plugType = 1;
+			attachmentAction = 1;
+			wetnessExposure = 0.1;
+		};
+	}
+}
+
 class CfgSoundShaders
 {
 	class AlbtrauminselAIVoice_SoundShaderBase

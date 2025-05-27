@@ -37,6 +37,10 @@ modded class eAIBase
             return;
         }
 
+        if(!IsAlive()){
+            return;
+        }
+
         eAIFaction factionObj = group.GetFaction();
         if (!factionObj)
         {
@@ -93,7 +97,7 @@ modded class eAIBase
                 continue;
 
             float dist = vector.Distance(player.GetPosition(), pos);
-            if (dist > PersonalRadioConfigLoader.Get().AISearchRadius;)
+            if (dist > PersonalRadioConfigLoader.Get().AISearchRadius)
                 continue;
 
             PlayerIdentity identity = player.GetIdentity();
