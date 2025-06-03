@@ -1,11 +1,18 @@
 modded class PersonalRadio
 {
     const int RPC_RADIO_SOUND_PLAY = 3642541;
-    const int RPC_RADIO_SOUND_STOP = 3642542;
 
     ref EffectSound m_RadioSound;
 
-    void TryPlayRemoteFunk(string soundSet)
+    void TriggerBroadcastServer(string soundSet)
+    {
+        if (GetGame().IsClient())
+            return;
+
+        GetGame().RPCSingleParam(radio, RPC_RADIO_SOUND_PLAY, new Param1<string>(soundSet), true, null);
+    }
+
+    void PlayBroadcastClient(string soundSet)
     {
         if (!IsOperational())
         {
@@ -62,19 +69,7 @@ modded class PersonalRadio
             Param1<string> data;
             if (ctx.Read(data))
             {
-                if (IsOperational())
-                {
-                    TryPlayRemoteFunk(data.param1);
-                }
-            }
-        }
-
-        if (rpc_type == RPC_RADIO_SOUND_STOP)
-        {
-            if (m_RadioSound)
-            {
-                m_RadioSound.Stop();
-                m_RadioSound = null;
+                PlayBroadcastClient(data.param1);
             }
         }
     }

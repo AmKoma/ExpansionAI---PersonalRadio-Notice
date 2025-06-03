@@ -106,6 +106,7 @@ modded class eAIBase
                 continue;
             }
 
+            //Radios in player inventory
             array<EntityAI> items = new array<EntityAI>();
             player.GetInventory().EnumerateInventory(InventoryTraversalType.PREORDER, items);
 
@@ -114,9 +115,16 @@ modded class eAIBase
                 PersonalRadio radio = PersonalRadio.Cast(item);
                 if (radio && radio.IsOperational())
                 {
-                    GetGame().RPCSingleParam(radio, PersonalRadio.RPC_RADIO_SOUND_PLAY, new Param1<string>(soundSet), true, player.GetIdentity());
+                    //Old
+                    //GetGame().RPCSingleParam(radio, PersonalRadio.RPC_RADIO_SOUND_PLAY, new Param1<string>(soundSet), true, player.GetIdentity());
+
+                    //New
+                    radio.TriggerBroadcastServer(soundSet);
                 }
             }
+
+            //Radios in the map/ground
+            //TODO
         }
 
         ScheduleNextFunk();
