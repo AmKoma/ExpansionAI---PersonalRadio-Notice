@@ -75,6 +75,16 @@ class CfgSoundShaders
 		range = 25;
 		volume = 0.8;
 	};
+	class PersonalRadio_Airfield_Vybor_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
+	{
+		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Airfield_Vybor_Mercenaries", 1}};
+	};
+
+	class PersonalRadio_Balota_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
+	{
+		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Balota_Mercenaries", 1}};
+	};
+
 	class PersonalRadio_Bolshoy_Kotel_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
 	{
 		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Bolshoy_Kotel_Mercenaries", 1}};
@@ -110,6 +120,11 @@ class CfgSoundShaders
 		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Metalurg_Mercenaries", 1}};
 	};
 
+	class PersonalRadio_Nadezhdino_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
+	{
+		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Nadezhdino_Mercenaries", 1}};
+	};
+
 	class PersonalRadio_Novaya_Petrovka_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
 	{
 		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Novaya_Petrovka_Mercenaries", 1}};
@@ -123,6 +138,11 @@ class CfgSoundShaders
 	class PersonalRadio_Novy_Sobor_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
 	{
 		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Novy_Sobor_Mercenaries", 1}};
+	};
+
+	class PersonalRadio_Polyana_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
+	{
+		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Polyana_Mercenaries", 1}};
 	};
 
 	class PersonalRadio_Rogovo_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
@@ -150,11 +170,6 @@ class CfgSoundShaders
 		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Unknown", 1}};
 	};
 
-	class PersonalRadio_Airfield_Vybor_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
-	{
-		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Airfield_Vybor_Mercenaries", 1}};
-	};
-
 	class PersonalRadio_Vybor_Mercenaries_SoundShader : AlbtrauminselAIVoice_SoundShaderBase
 	{
 		samples[] = {{"AlbtrauminselAIVoice\Audio\PersonalRadio_Vybor_Mercenaries", 1}};
@@ -173,6 +188,16 @@ class CfgSoundShaders
 
 class CfgSoundSets
 {
+	class PersonalRadio_Airfield_Vybor_Mercenaries_SoundSet
+	{
+		soundShaders[] = {"PersonalRadio_Airfield_Vybor_Mercenaries_SoundShader"};
+	};
+
+	class PersonalRadio_Balota_Mercenaries_SoundSet
+	{
+		soundShaders[] = {"PersonalRadio_Balota_Mercenaries_SoundShader"};
+	};
+
 	class PersonalRadio_Bolshoy_Kotel_Mercenaries_SoundSet
 	{
 		soundShaders[] = {"PersonalRadio_Bolshoy_Kotel_Mercenaries_SoundShader"};
@@ -208,6 +233,11 @@ class CfgSoundSets
 		soundShaders[] = {"PersonalRadio_Metalurg_Mercenaries_SoundShader"};
 	};
 
+	class PersonalRadio_Nadezhdino_Mercenaries_SoundSet
+	{
+		soundShaders[] = {"PersonalRadio_Nadezhdino_Mercenaries_SoundShader"};
+	};
+
 	class PersonalRadio_Novaya_Petrovka_Mercenaries_SoundSet
 	{
 		soundShaders[] = {"PersonalRadio_Novaya_Petrovka_Mercenaries_SoundShader"};
@@ -221,6 +251,11 @@ class CfgSoundSets
 	class PersonalRadio_Novy_Sobor_Mercenaries_SoundSet
 	{
 		soundShaders[] = {"PersonalRadio_Novy_Sobor_Mercenaries_SoundShader"};
+	};
+
+	class PersonalRadio_Polyana_Mercenaries_SoundSet
+	{
+		soundShaders[] = {"PersonalRadio_Polyana_Mercenaries_SoundShader"};
 	};
 
 	class PersonalRadio_Rogovo_Mercenaries_SoundSet
@@ -246,11 +281,6 @@ class CfgSoundSets
 	class PersonalRadio_Unknown_SoundSet
 	{
 		soundShaders[] = {"PersonalRadio_Unknown_SoundShader"};
-	};
-
-	class PersonalRadio_Airfield_Vybor_Mercenaries_SoundSet
-	{
-		soundShaders[] = {"PersonalRadio_Airfield_Vybor_Mercenaries_SoundShader"};
 	};
 
 	class PersonalRadio_Vybor_Mercenaries_SoundSet

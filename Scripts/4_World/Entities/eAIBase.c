@@ -37,7 +37,8 @@ modded class eAIBase
             return;
         }
 
-        if(!IsAlive()){
+        if (!IsAlive())
+        {
             return;
         }
 
@@ -50,7 +51,6 @@ modded class eAIBase
 
         string faction = factionObj.GetName();
 
-        // Fraktion erlaubt?
         if (!PersonalRadioConfigLoader.Get().IsFactionAllowed(faction))
         {
             if (m_FunkBroadcastTimer)
@@ -61,7 +61,6 @@ modded class eAIBase
             return;
         }
 
-        // Dynamische Broadcast-Chance prüfen
         float minChance = PersonalRadioConfigLoader.Get().MinBroadcastChance;
         float maxChance = PersonalRadioConfigLoader.Get().MaxBroadcastChance;
         float actualChance = Math.RandomFloatInclusive(minChance, maxChance);
@@ -106,7 +105,6 @@ modded class eAIBase
                 continue;
             }
 
-            //Radios in player inventory
             array<EntityAI> items = new array<EntityAI>();
             player.GetInventory().EnumerateInventory(InventoryTraversalType.PREORDER, items);
 
@@ -115,16 +113,9 @@ modded class eAIBase
                 PersonalRadio radio = PersonalRadio.Cast(item);
                 if (radio && radio.IsOperational())
                 {
-                    //Old
-                    //GetGame().RPCSingleParam(radio, PersonalRadio.RPC_RADIO_SOUND_PLAY, new Param1<string>(soundSet), true, player.GetIdentity());
-
-                    //New
                     radio.TriggerBroadcastServer(soundSet);
                 }
             }
-
-            //Radios in the map/ground
-            //TODO
         }
 
         ScheduleNextFunk();

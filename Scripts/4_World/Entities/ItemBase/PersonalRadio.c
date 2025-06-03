@@ -9,7 +9,7 @@ modded class PersonalRadio
         if (GetGame().IsClient())
             return;
 
-        GetGame().RPCSingleParam(radio, RPC_RADIO_SOUND_PLAY, new Param1<string>(soundSet), true, null);
+        GetGame().RPCSingleParam(this, RPC_RADIO_SOUND_PLAY, new Param1<string>(soundSet), true, null);
     }
 
     void PlayBroadcastClient(string soundSet)
