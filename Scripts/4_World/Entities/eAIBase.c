@@ -118,6 +118,8 @@ modded class eAIBase
             }
         }
 
+        //TODO: ALLE RADIOS DIE NICHT IM SPIELERBESITZ SIND
+
         ScheduleNextFunk();
     }
 
